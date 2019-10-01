@@ -1,0 +1,9 @@
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\bin\Debug\netcoreapp2.2\Mobilya.Entity.deps.json
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\bin\Debug\netcoreapp2.2\Mobilya.Entity.dll
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\bin\Debug\netcoreapp2.2\Mobilya.Entity.pdb
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.csprojAssemblyReference.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.csproj.CoreCompileInputs.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.AssemblyInfoInputs.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.AssemblyInfo.cs
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.dll
+C:\Users\osman\source\repos\Mobilya\Mobilya.Entity\obj\Debug\netcoreapp2.2\Mobilya.Entity.pdb

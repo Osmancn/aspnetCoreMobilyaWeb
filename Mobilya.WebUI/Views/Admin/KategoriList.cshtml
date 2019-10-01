@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Kategori>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Kategori Listesi";
+}
+
+
+<div class="container mt-3">
+    <h2>Kategori Listesi</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            @if (Model.Count() > 0)
+            {
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Kategori Adı</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <th>@item.KategoriId</th>
+                                <th>@item.KategoriAd</th>
+                                <th>
+                                    <a class="btn btn-primary btn-sm" asp-action="KategoriDuzenle" asp-route-id="@item.KategoriId">
+                                        Düzenle
+                                    </a>
+                                    <a class="btn btn-danger btn-sm" asp-action="KategoriSil" asp-route-id="@item.KategoriId">
+                                        Sil
+                                    </a>
+                                </th>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-danger">
+                    Kategori Bulunamadı
+                </div>
+            }
+
+        </div>
+    </div>
+    <a class="btn btn-success" asp-action="KategoriEkle">Kategori Ekle</a>
+</div>

@@ -1,0 +1,19 @@
+﻿@model Kategori
+@{
+    ViewData["Title"] = "KategoriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container mt-3">
+    <h2>Kategori Ekle</h2>
+    <hr />
+    <form asp-action="KategoriEkle" method="post">
+        <div class="form-group">
+            <label asp-for="KategoriAd">Kategori Adı</label>
+            <input asp-for="KategoriAd" />
+        </div>
+        <button type="submit" class="btn btn-success">Kategori Ekle</button>
+        <a asp-action="Index" class="btn btn-warning">İptal</a>
+    </form>
+</div>
+

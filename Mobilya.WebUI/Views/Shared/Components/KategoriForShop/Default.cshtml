@@ -1,0 +1,13 @@
+﻿@model IEnumerable<Kategori>
+
+<li><a asp-controller="Home" asp-action="Kategori" asp-route-id="0">Tüm Kategoriler </a></li>
+@foreach (var item in Model)
+{
+    <li>
+        <a asp-controller="Home" asp-action="Kategori" asp-route-id="@item.KategoriId">
+            @item.KategoriAd
+        </a>
+    </li>
+
+}
+

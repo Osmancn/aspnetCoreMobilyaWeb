@@ -1,0 +1,35 @@
+﻿@model Urun
+@{
+    ViewData["Title"] = "UrunEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<div class="container">
+    <h2>Ürün Ekle</h2>
+    <hr />
+    <div class="row">
+        <div class="col">
+            <form asp-action="UrunEkle" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="UrunBaslik">Başlık</label>
+                    <input asp-for="UrunBaslik" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Aciklama">Açıklama</label>
+                    <textarea asp-for="Aciklama" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Fotoğraflar</label>
+                    <input type="file" name="file" id="file" class="form-control" multiple/>
+                </div>
+                <div class="form-group">
+                    <label asp-for="KategoriId">Kategori</label>
+                    <select class="form-control" asp-for="KategoriId" asp-items="ViewBag.Kategoriler">
+                        <option disabled selected value="">Kategori Seçiniz</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <a class="btn btn-warning" asp-action="UrunList">İptal</a>
+            </form>
+        </div>
+    </div>
+</div>

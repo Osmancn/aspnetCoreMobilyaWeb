@@ -1,0 +1,127 @@
+﻿@model IEnumerable<UrunImageModel>
+@{
+    ViewData["Title"] = "Kategori";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="~/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="~/styles/shop_styles.css">
+    <link rel="stylesheet" type="text/css" href="~/styles/shop_responsive.css">
+}
+
+<div class="shop">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+
+                <!-- Shop Sidebar -->
+                <div class="shop_sidebar">
+                    <div class="sidebar_section">
+                        <div class="sidebar_title">Kategoriler</div>
+                        <ul class="sidebar_categories">
+                            @await Component.InvokeAsync("KategoriForShop")
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 style="color:#0e8ce4">
+                            @ViewBag.kategori
+                        </h4>
+                    </div>
+                    <div class="col-4 ml-auto ml-1">
+                        <div class="row">
+                            <p class="ml-auto" style="color:#0e8ce4; ">
+                                @Model.Count() &nbsp</p>ürün bulundu
+                        </div>
+                    </div>
+                </div>
+                <div id="carouselExampleIndicators" class="carousel slide my-4" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class=""></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item">
+                            <a asp-controller="Urun" asp-action="Detay" asp-route-id="@Model.ToList()[0].Urun.UrunId">
+                                <img class="d-block img-fluid" src="@Model.ToList()[0].Images[0].ImageUrl" alt="First slide"
+                                     style=" height:400px;width:900px; max-height:100%; max-width:100%">
+                            </a>
+                        </div>
+                        <div class="carousel-item active">
+                            <a asp-controller="Urun" asp-action="Detay" asp-route-id="@Model.ToList()[1].Urun.UrunId">
+                                <img class="d-block img-fluid" src="@Model.ToList()[1].Images[0].ImageUrl" alt="Second slide"
+                                     style=" height:400px;width:900px; max-height:100%; max-width:100%">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a asp-controller="Urun" asp-action="Detay" asp-route-id="@Model.ToList()[2].Urun.UrunId">
+                                <img class="d-block img-fluid" src="@Model.ToList()[2].Images[0].ImageUrl" alt="Third slide"
+                                     style=" height:400px;width:900px; max-height:100%; max-width:100%">
+                            </a>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <hr />
+                <div class="row mt-4">
+                    @foreach (var item in Model)
+                    {
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div>
+                                <a asp-controller="Urun" asp-action="Detay" asp-route-id="@item.Urun.UrunId">
+                                    <img class="card-img-top rounded" src="@item.Images[0].ImageUrl" style=" height:200px;width:300px; max-height:100%; max-width:100%">
+                                </a>
+                                <div class="card-body mt-2 mb-0">
+
+                                    <h4 class="card-title text-center" style="color:dimgray;">
+                                        @item.Urun.UrunBaslik
+                                    </h4>
+                                </div> 
+                            </div>
+                        </div>
+
+                    }
+                </div>
+
+
+                <!-- /.row -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/styles/bootstrap4/popper.js"></script>
+    <script src="~/styles/bootstrap4/bootstrap.min.js"></script>
+    <script src="~/plugins/greensock/TweenMax.min.js"></script>
+    <script src="~/plugins/greensock/TimelineMax.min.js"></script>
+    <script src="~/plugins/scrollmagic/ScrollMagic.min.js"></script>
+    <script src="~/plugins/greensock/animation.gsap.min.js"></script>
+    <script src="~/plugins/greensock/ScrollToPlugin.min.js"></script>
+    <script src="~/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+    <script src="~/plugins/easing/easing.js"></script>
+    <script src="~/plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="~/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="~/plugins/parallax-js-master/parallax.min.js"></script>
+    <script src="~/js/shop_custom.js"></script>
+}
+

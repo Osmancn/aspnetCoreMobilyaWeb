@@ -1,0 +1,12 @@
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\bin\Debug\netcoreapp2.2\Mobilya.Data.deps.json
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\bin\Debug\netcoreapp2.2\Mobilya.Data.dll
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.csprojAssemblyReference.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.csproj.CoreCompileInputs.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.AssemblyInfoInputs.cache
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.AssemblyInfo.cs
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\bin\Debug\netcoreapp2.2\Mobilya.Data.pdb
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\bin\Debug\netcoreapp2.2\Mobilya.Entity.dll
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\bin\Debug\netcoreapp2.2\Mobilya.Entity.pdb
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.csproj.CopyComplete
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.dll
+C:\Users\osman\source\repos\Mobilya\Mobilya.Data\obj\Debug\netcoreapp2.2\Mobilya.Data.pdb
